@@ -1,7 +1,7 @@
 const routes = {
   folders: "/",
-  Notes: "/notes",
-  NotesText: "/notes/text"
+  Notes: "/notes/:fold",
+  NotesText: "/notes/:fold/text"
 };
 
-export default routes
+export default routes;

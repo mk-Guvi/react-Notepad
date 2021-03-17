@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { InputGroup, InputGroupAddon, Input, Button } from "reactstrap";
 import { Link } from "react-router-dom";
+import routes from "../routes/routes";
 const Folder = () => {
   const [folders, setFolder] = useState(["fold1"]);
   const [input, setInput] = useState("");
@@ -32,7 +33,11 @@ const Folder = () => {
       {folders.map((fold, foldIndex) => {
         return (
           <h4>
-            <Link key={foldIndex} to="#" color="primary">
+            <Link
+              key={foldIndex}
+              to={routes.Notes.replace(":fold", fold)}
+              color="primary"
+            >
               {fold}
             </Link>
           </h4>
